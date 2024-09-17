@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+            background-color: #76a1b3;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width:min(100%,300px);
+            gap:5px;
+        }
+
+        input{
+            border:none;
+            outline:#3377ff 1px solid;
+            height: 30px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        input:focus{
+            outline:#3399ff 2px solid;
+        }
+
+        button{
+            width:max(50% , 80px);
+
+            background-color: #4280fb;
+            color:#fff;
+            padding:7px 15px;
+            border-radius: 8px;
+            border:none;
+        }
+
+        button:focus{
+            background-color: #2b6ff7;
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <form id="videoId-form">
+        <label for="">last videos:</label>
+        <select  id="old-videos"></select>
+        <label>write Video id</label>
+        <input id="video-id" type="text">
+        <button>show it</button>
+    </form>
+
+
+    <script type="module" src="assets/index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
