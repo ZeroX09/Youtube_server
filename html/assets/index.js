@@ -13,8 +13,6 @@ videoIdForm.addEventListener("submit",function(e){
     let videoId = videoIdInput.value
     if(!videoId.trim())return;
     Socket.emit("video-id",videoId)
-    alert(videoId)
-
     if(!old_videos.includes(videoId)){
         old_videos.push(videoId)
     }
